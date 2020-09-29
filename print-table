@@ -1,0 +1,40 @@
+/* Write a program which prints table in a formatted 
+manner. The program should ask the user to enter the 
+table number and upto how many digits he wants to 
+print the table */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int table, tableRange;
+    cout << "Which table do you want to print? ";
+    cin >> table;
+    
+    while (table<0)
+    {
+        cout << "[+] INVALID INPUT!!!" << endl;
+        cout << "Which table do you want to print? ";
+        cin >> table;
+    }
+    
+    cout << "Upto how many digits you want to get the table? ";
+    cin >> tableRange;
+
+    while (tableRange<0)
+    {
+        cout << "[+] INVALID INPUT!!!" << endl;
+        cout << "Upto how many digits you want to get the table? ";
+        cin >> tableRange;
+    }
+
+    int i = 0;
+    do
+    {
+        int ans = table * i;
+        cout << table << " * " << i << " = " << ans << endl;
+        i++;
+    } while (i<=tableRange);
+
+    return 0;
+}
